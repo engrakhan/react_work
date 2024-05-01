@@ -1,44 +1,66 @@
 body {
-  background-color: black;
-  /* overflow: hidden; */
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: Arial, sans-serif; /* Choose a commonly used font */
 }
+
 .wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
+
 .wrapper button {
-  background-color: rgb(247, 0, 255);
-  padding: 20px;
-  border-radius: 10px;
+  background-color: #6c5ce7; /* Purple button color */
+  padding: 15px 30px; /* Decrease padding for a sleeker look */
+  border-radius: 5px; /* Slightly rounded corners */
   border: none;
   color: #fff;
-  font-size: 22px;
-  margin-bottom: 3px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
-.accordian {
-  width: 550px;
-  max-width: 100%;
+
+.wrapper button:hover {
+  background-color: #8e44ad; /* Darker purple on hover */
 }
+
+.accordion {
+  width: 80%; /* Adjusted width for better responsiveness */
+  max-width: 600px; /* Limit width for larger screens */
+  margin-top: 20px; /* Add some space between button and accordion */
+  overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
+}
+
 .item {
-  background-color: rgb(247, 0, 255);
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  border-radius: 10px;
+  background-color: #6c5ce7; /* Purple item background */
+  margin-bottom: 15px; /* Increase margin between items */
+  padding: 20px; /* Increase padding for better readability */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
+
+.item:hover {
+  transform: translateY(-3px); /* Lift item slightly on hover */
+}
+
 .title {
   color: #fff;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
+
+.title h3 {
+  margin: 0; /* Remove margin for cleaner look */
+}
+
 .content {
   color: #fff;
-  height: auto;
+  padding: 15px 0; /* Add padding for better spacing */
 }
